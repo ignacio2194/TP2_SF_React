@@ -10,9 +10,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url(https://raw.githubusercontent.com/ignacio2194/rickAndMorty-API/main/images/heic1909a.jpg); */
+
+}
+h1{
+  color: rgb(41, 40, 40);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
