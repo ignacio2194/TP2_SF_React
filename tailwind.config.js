@@ -12,6 +12,7 @@ module.exports = {
       "characterDead": "rgb(252, 107, 107)",
       "characterUnknown": "rgb(252, 184, 107)"
     },
+    
   
     backgroundSize: {
       'auto': 'auto',
