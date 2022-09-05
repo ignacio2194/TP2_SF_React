@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import RickandMortyDetails from "./RickandMortyDetails";
 import "../index.css";
 const RickAndMortyCards = () => {
   const [character, setCharacter] = useState([]);
@@ -8,7 +9,6 @@ const RickAndMortyCards = () => {
     const url = "https://rickandmortyapi.com/api/character";
     const data = await fetch(url);
     const res = await data.json();
-    console.log(res.results.episode)
 
     setCharacter(res.results);
   };
@@ -17,29 +17,59 @@ const RickAndMortyCards = () => {
   }, []);
 
   return (
-    <div>
-    <h1 className="text-3xl font-bold text-center">
-      Rick and morty Characters
-    </h1>
-    <div className="grid grid-cols-3 container mx-8 my-8">
-    {character.map((item) => (
+    <div className=" bg-container">
+      <h1 className="text-3xl font-bold text-center text-white ">
+        Rick and morty Characters
+      </h1>
+      <div className="grid grid-cols-3 gap-3 ">
+        {character.map((item,index) => (
+          <button key={index} className="cursor-pointer" onClick={(e)=>RickandMortyDetails(item)}>
+            <div
+              key={item.id} 
+              className="max-w-sm rounded overflow-hidden shadow-lg border-3 border-solid border-[#758efc] mx-20 my-5" 
+            >
+              <div className="relative">
+                <p
+                  className={
+                    item.status === "Alive"
+                      ? "bg-characterAlive text-white font-semibold inline rounded-full text-lg absolute top-3 right-3 px-2 py-1"
+                      : item.status === "unknown"
+                      ? "bg-characterUnknown  text-white inline rounded-full text-lg absolute top-3 right-3 px-2 py-1 "
+                      : "bg-characterDead  text-white inline rounded-full text-lg absolute top-3 right-3 px-2 py-1 "
+                  }
+                >
+                  {item.status}
+                </p>
+                <img
+                  src={item.image}
+                  alt="images"
+                  className="w-full rounded-t"
+                  id={item.id}
+                />
+              </div>
 
-      <div key={item.id}>
-        <div className="itemCards_Container_img">
-          <img src={item.image} alt="images" />
-        </div>
-
-        <div className="itemCards_Container_data">
-          <h1 className="font-bold text-gray-700">{item.name}</h1>
-          <h3 className="font-semibold text-gray-700">
-            Last known location: {item.location.name}</h3>
-          
-        </div>
+              <div className="itemCards_Container_data px-6 py-4">
+                <h1 className="font-bold text-[#54ea0f] text-center">
+                  {item.name}
+                </h1>
+                <h3 className="font-semibold text-[#54ea0f] text-center">
+                  Last location: {item.location.name}
+                </h3>
+              </div>
+            </div>
+          </button>
+        ))}
       </div>
-    ))}
-    </div>
 
-  </div>
+      <div className="flex justify-around">
+        <button className="  text-white  text-lg py-1 px-4 rounded-md bg-black  ">
+          back
+        </button>
+        <button className="  text-white  text-lg py-1 px-4 rounded-md  bg-black  ">
+          next
+        </button>
+      </div>
+    </div>
   );
 };
 
