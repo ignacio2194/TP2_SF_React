@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import RickAndMortyCards from "./components/RickAndMortyCards";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
+import Usuarios from "./components/Usuarios";
 import './index.css';
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
           <Route
               path="/"
               element={<Home />}
+          /> 
+           <Route
+              path="/Usuarios/"
+              element={<Usuarios/>}
           />         
           <Route
               path="/Cards/"
