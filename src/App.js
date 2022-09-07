@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import RickAndMortyCards from "./components/RickAndMortyCards";
+import RickandMortyDetails from "./components/RickandMortyDetails";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
 import Usuarios from "./components/Usuarios";
@@ -27,11 +28,11 @@ function App() {
           <Route
               path="/Contact/"
               element={<ContactUs />}
-          />         
-          <Route
-              path="/*"
-              element={<RickAndMortyCards />}
-          />         
+          />          
+              <Route
+              path="/DetailsCharacter/:name/:status/:id"
+              element={<RickandMortyDetails />}
+          />        
 
       </Routes>  
       

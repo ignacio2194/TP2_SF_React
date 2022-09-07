@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import RickandMortyDetails from "./RickandMortyDetails";
+import { Link } from "react-router-dom";
 import "../index.css";
+
 const RickAndMortyCards = () => {
   const [character, setCharacter] = useState([]);
   const getData = async () => {
@@ -14,6 +15,7 @@ const RickAndMortyCards = () => {
   };
   useEffect(() => {
     getData();
+   
   }, []);
 
   return (
@@ -23,7 +25,7 @@ const RickAndMortyCards = () => {
       </h1>
       <div className="grid grid-cols-3 gap-3 ">
         {character.map((item,index) => (
-          <button key={index} className="cursor-pointer" onClick={(e)=>RickandMortyDetails(item)}>
+         <Link  key ={index}to={`/DetailsCharacter/${item.name}/${item.status}/${item.id}`}  className="cursor-pointer">
             <div
               key={item.id} 
               className="max-w-sm rounded overflow-hidden shadow-lg border-3 border-solid border-[#758efc] mx-20 my-5" 
@@ -57,7 +59,7 @@ const RickAndMortyCards = () => {
                 </h3>
               </div>
             </div>
-          </button>
+          </Link>
         ))}
       </div>
 
