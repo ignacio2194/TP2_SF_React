@@ -4,12 +4,12 @@ import { Routes, Route } from "react-router-dom";
 import RickAndMortyCards from "./components/RickAndMortyCards";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
-import Usuarios from "./components/Usuarios";
+import Users from "./components/Users";
 import './index.css';
 
 function App() {
   return (
-    <div className="App px-12  ">
+    <div className="App px-12 h-screen ">
       <NavBar />
       <Routes>
           <Route
@@ -17,8 +17,8 @@ function App() {
               element={<Home />}
           /> 
            <Route
-              path="/Usuarios/"
-              element={<Usuarios/>}
+              path="/Users/"
+              element={<Users/>}
           />         
           <Route
               path="/Cards/"
