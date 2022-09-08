@@ -30,7 +30,7 @@ function App() {
               element={<ContactUs />}
           />          
               <Route
-              path="/DetailsCharacter/:name/:status/:id"
+              path="/DetailsCharacter/:id/"
               element={<RickandMortyDetails />}
           />        
 

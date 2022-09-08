@@ -1,22 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 const RickandMortyDetails = () => {
-  const { id, name, status } = useParams();
+  const { id } = useParams();
+  const [charact, setCharacter] = useState({});
+  const { image, name, species, origin, location, gender, status } = charact;
+
+  const getDataCharacter = async () => {
+    const url = `https://rickandmortyapi.com/api/character/${id}`;
+    const data = await fetch(url);
+    const res = await data.json();
+    setCharacter(res);
+  };
+
+  useEffect(() => {
+    getDataCharacter();
+  }, []);
+  console.log(charact);
 
   return (
     <div className="bg-container">
-      <div>
-        {" "}
-        <img
-          src={`https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`}
-          alt=""
-        />
-      </div>
-      <div>
-        {" "}
-        <p className="text-white">{name}</p>
-        <p className="text-white">{status}</p>
-      </div>
+      {
+        <div className="flex flex-col-2 items-center mt-20">
+          <div >
+            <img  className="w-full"  src={image} alt="" />
+          </div>
+          <div className="ml-40 flex flex-col justify-between text-center">
+            <h1 className="text-white font-bold text-xl"> Name: {name}</h1>
+            <h2 className=" text-[#54ea0f] font-semibold text-lg"> Species: {species}</h2>
+            <h2 className=" text-[#54ea0f] font-semibold text-lg"> Gender: {gender}</h2>
+            <h2 className=" text-[#54ea0f] font-semibold text-lg"> Last know location: {location?.name}</h2>
+            <h2 className=" text-[#54ea0f] font-semibold text-lg "> Origin: {origin?.name}</h2>
+            <h2 className={ status === "Alive"
+                      ? "bg-characterAlive text-white font-bold inline-block  text-2xl py-1 mt-2 "
+                      : status === "unknown"
+                      ? "bg-characterUnknown  text-white font-bold inline-block  text-2xl py-1 mt-2 "
+                      : "bg-characterDead  text-white font-bold inline-block  text-2xl py-1 mt-2 "}> Status: {status}</h2>
+          </div>
+        </div>
+      }
     </div>
   );
 };
