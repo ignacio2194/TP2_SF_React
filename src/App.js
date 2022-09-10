@@ -19,7 +19,7 @@ function App() {
           /> 
            <Route
               path="/Users/"
-              element={<Users/>}
+              element={<Users />}
           />         
           <Route
               path="/Cards/"
