@@ -7,10 +7,11 @@ import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
 import Users from "./components/Users";
 import './index.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App px-12 h-screen ">
+    <div className="flex flex-col justify-between h-screen">
       <NavBar />
       <Routes>
           <Route
@@ -34,8 +35,8 @@ function App() {
               element={<RickandMortyDetails />}
           />        
 
-      </Routes>  
-      
+      </Routes>
+      <Footer />
     </div>
   );
 }

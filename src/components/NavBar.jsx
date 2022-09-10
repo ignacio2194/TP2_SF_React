@@ -4,7 +4,7 @@ import "../index.css";
 
 const NavBar = () => {
     return(
-        <div className="flex w-full justify-around items-start mb-4">
+        <div className="flex w-full justify-around items-start mb-3 pt-3">
             <Link className="text-white text-3xl font-bold" to={"/"} >Home</Link>
             <Link className="text-white text-3xl font-bold" to={"/Users/"} >Users</Link>
             <Link className="text-white text-3xl font-bold" to={"/Cards/"} >Cards</Link>
