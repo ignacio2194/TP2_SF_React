@@ -41,10 +41,10 @@ body {
   background-color: #1e234d;
   height: 100%;
 }
-html {
+/* html {
   height: 100%;
   overflow: hidden;
-}
+} */
 .wrapper {
   position: absolute;
   margin: auto;
