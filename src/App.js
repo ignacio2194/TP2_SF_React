@@ -5,7 +5,7 @@ import RickAndMortyCards from "./components/RickAndMortyCards";
 import RickandMortyDetails from "./components/RickandMortyDetails";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
-import Usuarios from "./components/Usuarios";
+import Users from "./components/Users";
 import Error404 from "./components/Error404";
 import './index.css';
 import Footer from './components/Footer';
@@ -18,23 +18,23 @@ function App() {
             <Route
                 path="/"
                 element={<Home />}
-            /> 
+            />
             <Route
                 path="/Users/"
                 element={<Users />}
-            />         
+            />
             <Route
                 path="/Cards/"
                 element={<RickAndMortyCards />}
-            /> 
+            />
             <Route
                 path="/Contact/"
                 element={<ContactUs />}
-            />          
+            />
             <Route
             path="/DetailsCharacter/:id/"
             element={<RickandMortyDetails />}
-            />        
+            />
             <Route
             path="*"
             element={<Error404  />}

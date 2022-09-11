@@ -19,7 +19,7 @@ const Users = () => {
   return (
     <div className = "flex justify-center items-center h-5/6 w-full">
       <div className="bg-container text-white w-full h-full flex justify-center items-center">
-        <table className = "bg-red-300 border border-white h-96 text-center w-4/5">
+        <table className = "bg-red-300 border border-white h-96 text-center w-4/5 tabla">
           <tr className = "bg-blue-400">
             <th>Id</th>
             <th>Name</th>

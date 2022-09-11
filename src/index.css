@@ -122,4 +122,6 @@ html {
   
 }
 
-
+tr:nth-child(2n + 1) {
+  background-color: gray;
+}
