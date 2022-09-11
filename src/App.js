@@ -5,7 +5,8 @@ import RickAndMortyCards from "./components/RickAndMortyCards";
 import RickandMortyDetails from "./components/RickandMortyDetails";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
-import Users from "./components/Users";
+import Usuarios from "./components/Usuarios";
+import Error404 from "./components/Error404";
 import './index.css';
 import Footer from './components/Footer';
 
@@ -13,30 +14,33 @@ function App() {
   return (
     <div className="flex flex-col justify-between h-screen">
       <NavBar />
-      <Routes>
-          <Route
-              path="/"
-              element={<Home />}
-          /> 
-           <Route
-              path="/Users/"
-              element={<Users />}
-          />         
-          <Route
-              path="/Cards/"
-              element={<RickAndMortyCards />}
-          /> 
-          <Route
-              path="/Contact/"
-              element={<ContactUs />}
-          />          
-              <Route
-              path="/DetailsCharacter/:id/"
-              element={<RickandMortyDetails />}
-          />        
-
-      </Routes>
-      <Footer />
+        <Routes>
+            <Route
+                path="/"
+                element={<Home />}
+            /> 
+            <Route
+                path="/Users/"
+                element={<Users />}
+            />         
+            <Route
+                path="/Cards/"
+                element={<RickAndMortyCards />}
+            /> 
+            <Route
+                path="/Contact/"
+                element={<ContactUs />}
+            />          
+            <Route
+            path="/DetailsCharacter/:id/"
+            element={<RickandMortyDetails />}
+            />        
+            <Route
+            path="*"
+            element={<Error404  />}
+            />
+        </Routes>       
+        <Footer />
     </div>
   );
 }
