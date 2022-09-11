@@ -18,23 +18,23 @@ function App() {
             <Route
                 path="/"
                 element={<Home />}
-            /> 
+            />
             <Route
                 path="/Users/"
                 element={<Users />}
-            />         
+            />
             <Route
                 path="/Cards/"
                 element={<RickAndMortyCards />}
-            /> 
+            />
             <Route
                 path="/Contact/"
                 element={<ContactUs />}
-            />          
+            />
             <Route
             path="/DetailsCharacter/:id/"
             element={<RickandMortyDetails />}
-            />        
+            />
             <Route
             path="*"
             element={<Error404  />}
