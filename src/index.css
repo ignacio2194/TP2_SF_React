@@ -4,13 +4,17 @@
 
 
 body {
+  box-sizing: border-box;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(https://raw.githubusercontent.com/ignacio2194/rickAndMorty-API/main/images/heic1909a.jpg)
+  background-image: url(https://raw.githubusercontent.com/ignacio2194/rickAndMorty-API/main/images/heic1909a.jpg);
+ 
+  
+
 
 }
 h1{
@@ -40,19 +44,17 @@ body {
   padding: 0;
   background-color: #1e234d;
   height: 100%;
+
 }
-html {
-  height: 100%;
-  overflow: hidden;
-}
+
+
 .wrapper {
   position: absolute;
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
+  left: 25%;
   right: 0;
-  width: fit-content;
   text-align: center;
   
 }
@@ -62,9 +64,10 @@ html {
   font-weight: 900;
   font-size: 20.4em;
   display: block;
-  overflow: hidden;
+  overflow-y: hidden;
   width: fit-content;
   height: max-content;
+  text-align: center;
 }
 .wrapper span:first-letter {
   letter-spacing: 12vmax;
@@ -79,9 +82,11 @@ html {
   background-size: contain;
   background-position: center;
   animation: rotateIn 0.5s ease-out;
+  overflow-y: hidden;
 }
 .wrapper p {
-  text-align: center;
+  text-align: start;
+  margin-left: 30px;
   font-style: italic;
   font-weight: 400;
   color: #fff;
@@ -109,8 +114,6 @@ html {
 }
 .space {
   position: absolute;
-  width: 400vw;
-  height: 400vh;
   top: 50%;
   left: 50%;
   margin-top: -200vh;
@@ -119,6 +122,7 @@ html {
   backface-visibility: visible;
   background-image: url(https://raw.githubusercontent.com/ignacio2194/rickAndMorty-API/main/images/heic1909a.jpg);
   z-index: -100;
+
   
 }
 
