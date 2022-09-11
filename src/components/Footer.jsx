@@ -25,7 +25,7 @@ const Footer = () => {
           <li>nombre1</li>
         </div>
       </div>      
-      <div className="flex justify-between mt-1">
+      <div className="flex justify-between ">
         <span>Copyright © 2022 All Rights Reserved</span>
         <span>Privacy Policy | Terms of Use</span>
       </div>

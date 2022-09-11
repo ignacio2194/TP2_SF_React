@@ -42,7 +42,6 @@ code {
 body {
   margin: 0;
   padding: 0;
-  background-color: #1e234d;
   height: 100%;
 
 }
@@ -64,7 +63,6 @@ body {
   font-weight: 900;
   font-size: 20.4em;
   display: block;
-  overflow-y: hidden;
   width: fit-content;
   height: max-content;
   text-align: center;
@@ -82,10 +80,10 @@ body {
   background-size: contain;
   background-position: center;
   animation: rotateIn 0.5s ease-out;
-  overflow-y: hidden;
+ 
 }
 .wrapper p {
-  text-align: start;
+  text-align: top ;
   margin-left: 30px;
   font-style: italic;
   font-weight: 400;
@@ -121,7 +119,7 @@ body {
   animation: spin 240s linear infinite;
   backface-visibility: visible;
   background-image: url(https://raw.githubusercontent.com/ignacio2194/rickAndMorty-API/main/images/heic1909a.jpg);
-  z-index: -100;
+ z-index: -100;
 
   
 }
