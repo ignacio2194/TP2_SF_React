@@ -5,7 +5,8 @@ import RickAndMortyCards from "./components/RickAndMortyCards";
 import RickandMortyDetails from "./components/RickandMortyDetails";
 import ContactUs from "./components/ContactUs";
 import Home from "./components/Home";
-import Users from "./components/Users";
+import Usuarios from "./components/Usuarios";
+import Error404 from "./components/Error404";
 import './index.css';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           /> 
            <Route
               path="/Users/"
-              element={<Users/>}
+              element={<Usuarios/>}
           />         
           <Route
               path="/Cards/"
@@ -33,7 +34,10 @@ function App() {
               path="/DetailsCharacter/:id/"
               element={<RickandMortyDetails />}
           />        
-
+        <Route
+              path="*"
+              element={<Error404  />}
+          />    
       </Routes>  
       
     </div>
