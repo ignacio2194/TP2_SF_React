@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Descripcion general del proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El proposito de este proyecto es transformar el checkpoint #1 que esta hecho con HTML-CSS y JavaScript a React.js.
+
+Para este proyecto se decidio usa el gestor de paquetes npm.
+
+Podran ver el repositiorio del primer proyecto aca [Repositorio](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
