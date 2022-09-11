@@ -32,7 +32,11 @@ module.exports = {
       '4': '4px',
       '6': '6px',
       '8': '8px',
+    },
+    borderColor:{
+      default:'#758efc'
     }
+
     },
   },
   plugins: [],

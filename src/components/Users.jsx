@@ -10,7 +10,6 @@ const Users = () => {
     const data = await fetch(url);
     const res = await data.json();
     console.log(res)
-    
     setUsuario(res);
   };
   useEffect(() => {
@@ -19,7 +18,7 @@ const Users = () => {
 
   return (
     <div className = "flex justify-center items-center h-5/6 w-full">
-      <div className="bg-orange-400 text-white w-full h-full flex justify-center items-center">
+      <div className="bg-container text-white w-full h-full flex justify-center items-center">
         <table className = "bg-red-300 border border-white h-96 text-center w-4/5">
           <tr className = "bg-blue-400">
             <th>Id</th>

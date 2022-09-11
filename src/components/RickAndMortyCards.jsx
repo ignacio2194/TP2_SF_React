@@ -31,7 +31,7 @@ const RickAndMortyCards = () => {
          <Link  key ={index}to={`/DetailsCharacter/${item.id}`}  className="cursor-pointer">
             <div
               key={item.id} 
-              className="max-w-sm rounded overflow-hidden shadow-lg border-3 border-solid border-[#758efc] mx-20 my-5 mainContainer_character__contenido" 
+              className="max-w-sm rounded overflow-hidden shadow-lg border-3 border-solid border-default mx-20 my-5 mainContainer_character__contenido" 
             >
               <div className="relative">
                 <p
