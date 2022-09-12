@@ -20,6 +20,9 @@ body {
 h1{
   color: rgb(41, 40, 40);
 }
+h3 {
+  font-size: 1.5rem;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -128,6 +131,6 @@ body {
   
 }
 
-tr:nth-child(2n + 1) {
-  background-color: gray;
+tr:nth-child(2n + 2) {
+  background-color: rgba(87, 85, 85, 0.308);
 }

@@ -18,9 +18,10 @@ const Users = () => {
 
   return (
     <div className = "flex justify-center items-center h-5/6 w-full">
-      <div className="bg-container text-white w-full h-full flex justify-center items-center">
-        <table className = "bg-red-300 border border-white h-96 text-center w-4/5 tabla">
-          <tr className = "bg-blue-400">
+      <div className="bg-container text-black w-full h-full flex flex-col justify-center items-center my-5">
+      <h1 className="text-3xl font-bold text-center text-white mb-3">User Table</h1>
+        <table className = "bg-white bg-opacity-80 border border-white h-96 text-center w-4/5 tabla">
+          <tr className = "bg-blue-100">
             <th>Id</th>
             <th>Name</th>
             <th>Email</th>
