@@ -40,7 +40,7 @@ function App() {
             element={<Error404  />}
             />
         </Routes>       
-        {/* <Footer /> */}
+     
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 const Home = () => {
     return(
         <div className="bg-container text-white text-center text-lg">
@@ -10,6 +11,7 @@ const Home = () => {
                 <li>Cazal, Damian</li>
                 <li>Scharf, Guillermo</li>
             </ul>
+            <Footer/>
         </div>        
     )
 }

@@ -1,4 +1,7 @@
+import React from "react";
+import Footer from "./Footer";
 const ContactUs = () => {
+
 
 var validEmail = false;
 
@@ -98,7 +101,7 @@ function showFormData(){
                 </form>
             </div>
 
-
+            <Footer />
         </div>
     )
 
