@@ -23,11 +23,7 @@ const Footer = () => {
           <li>https://jsonplaceholder.typicode.com</li>
           <li>https://rickandmortyapi.com</li>
         </div>
-<<<<<<< HEAD
       </div>      
-=======
-      </div>
->>>>>>> dami
       <div className="flex justify-between ">
         <span>Copyright © 2022 All Rights Reserved</span>
         <span>Privacy Policy | Terms of Use</span>
