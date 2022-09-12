@@ -1,9 +1,16 @@
 import React from "react";
 import Footer from "./Footer";
+import { useEffect, useState} from "react";
+
 const ContactUs = () => {
 
+const [formName, setFormName] = useState([]);
+const [formEmail, setFormEmail] = useState([]);
+const [formComments, setFormComments] = useState([]);
+const [validEmail, setValidEmail] = useState([false]);
 
-var validEmail = false;
+useEffect(() => {
+}, [formName, formEmail]); //Array de dependencias del useEffect
 
 function isEmailValid(email){
     //Funcion de validacion basica de email con los metodos vistos hasta el momento en el SK de React.js
@@ -27,23 +34,26 @@ function isEmailValid(email){
     }
 }
 
-function validateEmail() {
+function validateEmail(email) {
+
     const inputEmail = document.getElementById('contactFormEmail');
+    setFormEmail(email);
   
-    if(isEmailValid(inputEmail.value.trim())){ 
-        validEmail = true;
+    if(isEmailValid(email)){ 
+        setValidEmail(true);
         inputEmail.style.color = "green";
     }else{  
-        validEmail = false;
+        setValidEmail(false);
         inputEmail.style.color = "red";        
     }  
 }    
+
 function sendForm(){
     if(!validEmail){
         alert("Please, enter a valid Email address.");
         return false;
-    }else if(document.getElementById('contactFormName').value.trim() == "" || 
-             document.getElementById('contactFormComments').value.trim() == ""){
+    }else if(document.getElementById('contactFormName').value.trim() === "" || 
+             document.getElementById('contactFormComments').value.trim() === ""){
         alert("Please, complete all the fields.");
         return false;
 
@@ -68,9 +78,9 @@ function showFormData(){
         <p>Your message has been sent as following:</p>
         <br /><br />
         <p>
-            <u>Name:</u> <i>${name}</i><br /><br />
-            <u>Email:</u> <i>${email}</i><br /><br />
-            <u>Comments:</u> <i>${comments}</i><br /><br />
+            <u>Name:</u> <i>${formName}</i><br /><br />
+            <u>Email:</u> <i>${formEmail}</i><br /><br />
+            <u>Comments:</u> <i>${formComments}</i><br /><br />
         </p>
     </div>
     `;
@@ -80,24 +90,30 @@ function showFormData(){
 
     return(
         <div className="bg-container">
-       <h1 clasName="pageTitle">Contact Us</h1> 
-            <div className="flex content-center justify-center p-5 rounded text-black w-96 bg-indigo-300" id="contactFormContainer">
+            <h1 className="text-3xl font-bold text-center text-white ">Contact Us</h1> 
+            <div className="flex content-center justify-center p-5 rounded text-black w-full " id="contactFormContainer">
                 <form id="contactForm" action="" 
                     onSubmit={(e) => {
                         e.preventDefault(); 
                         sendForm();
                     }} >
-                    <label for="name">Name</label>
-                    <input className="flex rounded resize-none mb-5 mt-2 p-1 w-80" type="text" name="name" id="contactFormName" />
-                    <label for="email">Email</label>
+                    <label htmlFor="name" className="text-white text-2xl" >Name</label>
+                    <input className="flex rounded resize-none mb-5 mt-2 p-1 w-80"
+                             type="text" 
+                             name="name" 
+                             value={formName}
+                             id="contactFormName" 
+                             onChange={(e) => setFormName(e.target.value)}
+                    />
+                    <label htmlFor="email" className="text-white text-2xl">Email</label>
                     <input className="flex rounded resize-none mb-5 mt-2 p-1 w-80" 
                             type="email" 
                             name="email" 
                             id="contactFormEmail" 
-                            onChange={(e) => {validateEmail()}} />
-                    <label for="comments">Comments</label>
+                            onChange={(e) => {validateEmail(e.target.value)}} />
+                    <label htmlFor="comments" className="text-white text-2xl">Comments</label>
                     <textarea className="flex rounded resize-none mb-5 mt-2 p-1 w-80" name="comments" id="contactFormComments" cols="30" rows="10"></textarea>    
-                    <button className="rounded p-1 w-80 bg-blue-600 cursor-pointer normal-case inline-block text-center items-center" id="contactFormSend" onclick="return(sendForm());">Send</button> 
+                    <button className="bg-characterAlive text-white font-bold inline-block  text-2xl py-1 mt-2 w-80" id="contactFormSend" onClick={(e) => {return(sendForm())}}>Send</button> 
                 </form>
             </div>
 
