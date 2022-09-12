@@ -2,73 +2,56 @@
 
 El proposito de este proyecto es transformar el checkpoint #1 que esta hecho con HTML-CSS y JavaScript a React.js.
 
+## Equipo 
+- Benitez Ignacio
+- Cazal Damian
+- Scharf Guillermo
+
+## Tecnologias usadas
+- [React.js](https://en.reactjs.org/)
+- [NMP](https://www.npmjs.com/)
+- [Tailwind](https://tailwindcss.com/)
+
+## Recursos
+Para mostrar la informacion en la pantalla del navegador se uso 2 API REST distintas.
+- [https://rickandmortyapi.com](https://rickandmortyapi.com)
+- [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
+
 Para este proyecto se decidio usa el gestor de paquetes npm.
 
-Podran ver el repositiorio del primer proyecto aca [Repositorio](https://github.com/facebook/create-react-app).
+Podran ver el primer proyecto aca [Repositorio del Primer Proyecto]().
 
-## Available Scripts
+## Como instalar el proyecto en tu ordenador
+El proyecto se encuentra en GitHub en este [Repositorio]()
+Antes de clonar el proyecto desde GitHub en nuestro ordenador lo que se tiene que tener en cuenta es que este automaticamente nos creara una carpeta donde se encontrara el proyecto clonado.
 
-In the project directory, you can run:
+Una vez ubicado donde queremos que este nuestro proyecto clonado usando nuestra consola/terminal de preferencia ejecutaremos el comando:
 
-### `npm start`
+```
+git clone https://github.com/ignacio2194/TP2_SF_React.git
+```
+Este comando nos creara una carpeta con el nombre TP2_SF_React donde en la misma consola ejecutaremos
+```
+cd TP2_SF_React
+```
+Una vez dentro de la carpeta para hacer funcionar el proyecto necesitaremos instalar todas las dependencias que necesita el proyecto para eso ejecutaremos el comando:
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Comandos disponibles
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+En el directorio del proyecto, puede ejecutar:
 
-### `npm test`
+```
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejecuta la aplicacion en el modo de desarrollo.\
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
-### `npm run build`
+Aclaracion este proceso puede tardar algunos minutos dependiendo de la velocidad de internet y del los componente de la pc que se posea.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Lapagina se volvera a cargar cuando realice cambios.\
+Tambien puede ver los errores en la consola.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
