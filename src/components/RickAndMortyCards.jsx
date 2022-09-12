@@ -67,14 +67,14 @@ const RickAndMortyCards = () => {
         ))}
       </div>
 
-      <div className="flex justify-around">
+      {/* <div className="flex justify-around">
         <button className="  text-white  text-lg py-1 px-4 rounded-md bg-black  ">
           back
         </button>
         <button className="  text-white  text-lg py-1 px-4 rounded-md  bg-black  ">
           next
         </button>
-      </div>
+      </div> */}
       <Footer/>
     </div>
   );
