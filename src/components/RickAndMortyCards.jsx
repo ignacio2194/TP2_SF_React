@@ -27,7 +27,7 @@ const RickAndMortyCards = () => {
         Rick and morty Characters
       </h1>
       <div className="grid grid-cols-3 gap-3 ">
-        {character.map((item,index) => (
+        { character.map((item,index) => (
           
          <Link  key ={index}to={`/DetailsCharacter/${item.id}`}  className="cursor-pointer">
             <div

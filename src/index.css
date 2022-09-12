@@ -53,6 +53,17 @@ body {
   height: 100%;
   overflow: hidden;
 } */
+
+/* ESTIOS PARA LA CARD DEL COMPONENT RICK AND MORTY DETAILS */
+.shadowForCard{
+  -webkit-box-shadow: 1px 3px 17px 11px rgba(84,84,84,1);
+  -moz-box-shadow: 1px 3px 17px 11px rgba(84,84,84,1);
+  box-shadow: 1px 3px 17px 11px rgba(84,84,84,1);
+}
+.hidden{
+  display: none;
+}
+/* ESTILOS DE LA PAAG 404  */
 .wrapper {
   position: absolute;
   margin: auto;

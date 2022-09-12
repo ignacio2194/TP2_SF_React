@@ -68,9 +68,9 @@ function sendForm(){
 }
 
 function showFormData(){
-    const name = document.getElementById('contactFormName').value;
-    const email = document.getElementById('contactFormEmail').value;
-    const comments = document.getElementById('contactFormComments').value;   
+    // const name = document.getElementById('contactFormName').value;
+    // const email = document.getElementById('contactFormEmail').value;
+    // const comments = document.getElementById('contactFormComments').value;   
     // Este mensaje es ilustrativo para mostrar la info que se deberia enviar por el form
     const msgToShow = `
     <div class="msgToShow">
