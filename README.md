@@ -55,3 +55,9 @@ Aclaracion este proceso puede tardar algunos minutos dependiendo de la velocidad
 Lapagina se volvera a cargar cuando realice cambios.\
 Tambien puede ver los errores en la consola.
 
+## ¿Que contiene y que hace cada pagina?
+
+### Home
+### Users
+### Card
+### Contact Us
