@@ -1,24 +1,27 @@
 import React from "react";
-import Footer from "./Footer";
-import { useEffect } from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import "../index.css";
-
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import LoadingSpinner from "./LoadingSpinner";
 
 const RickAndMortyCards = () => {
   const [character, setCharacter] = useState([]);
+
   const getData = async () => {
-    
+
     const url = "https://rickandmortyapi.com/api/character";
     const data = await fetch(url);
-    const res = await data.json();
 
+    const res = await data.json();
     setCharacter(res.results);
+   
   };
+
+
   useEffect(() => {
     getData();
-   
+  
   }, []);
 
   return (
@@ -27,12 +30,15 @@ const RickAndMortyCards = () => {
         Rick and morty Characters
       </h1>
       <div className="grid grid-cols-3 gap-3 ">
-        { character.map((item,index) => (
-          
-         <Link  key ={index}to={`/DetailsCharacter/${item.id}`}  className="cursor-pointer">
+        {  character.map((item, index) => (
+          <Link
+            key={index}
+            to={`/DetailsCharacter/${item.id}`}
+            className="cursor-pointer"
+          >
             <div
-              key={item.id} 
-              className="max-w-sm rounded overflow-hidden shadow-lg border-3 border-solid border-default mx-20 my-5 mainContainer_character__contenido" 
+              key={item.id}
+              className="max-w-sm rounded overflow-hidden shadow-lg border-3 border-solid border-default mx-20 my-5 mainContainer_character__contenido"
             >
               <div className="relative">
                 <p
@@ -75,7 +81,7 @@ const RickAndMortyCards = () => {
           next
         </button>
       </div> */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

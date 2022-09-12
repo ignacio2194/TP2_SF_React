@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 
-const LoadingSpinner = () => {
+const LoadingSpinner = (props) => {
     const [isLoading, setIsLoading] = useState(false);
-    setIsLoading(true)
+
   return (
     <div className='spinner-container'>
         <div className='loading-spinner'></div>
