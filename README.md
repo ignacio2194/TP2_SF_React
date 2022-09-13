@@ -62,11 +62,22 @@ Tambien puede ver los errores en la consola.
 Pantalla de inicio, en el que se muestra la información del proyecto, y los integrantes del grupo de trabajo.
 
 ### Users
+
 En esta pagina lo que se vera es una tabla de usuarios con varios campos, todo esto esta en un componente llamado Users.\
 Se usaron 2 Hooks para este componente (useState y useEffect).\
 La informacion es traida desde una API REST cual enlace se encuentra mas arriba en el apartado de recursos, la informacion se trae con el metodo Fetch con el complemento de Asyn/Await.\
 Por ultimo se renderiza todo y con un metodo map se itera cada infomacion y se arma cada cada fila con sus respectivos datos.
+
 ### Card
+
+Trabajo Realizado: mostrar informacion de Rick and Morty en formato "Card", crear pagina 404 y que el usuario pueda seleccionar una card y muestre mas info de la misma.
+
+Cards de que cada personaje : Se hizo una peticion a la API para acceder a la informacion de cada personaje y atravez de componentes y estados mostrarlos en el DOM. Se utilizo un pequeño ternario para establecer el status del personaje en cada card y por el momento no se realizo la paginacion.
+
+Acceder a la card : Cada card tiene un evento Onclick en la que el usuario puede acceder a la misma y se le renderizara toda la informacion relevante del personaje.
+
+Pagina404 : Pagina con una pequeña animacion que le muestra al usuario que a lo que quiera acceder ya sea modificando la URL o poniendo un id que no es valido, le mostrara la pagina mencionada. 
+
 ### Contact Us
 
 En esta sección se desarrollo un formulario de contacto que consiste de 3 campos: Nombre, Email y 
