@@ -63,8 +63,7 @@ Tambien puede ver los errores en la consola.
 ### Contact Us
 
 En esta sección se desarrollo un formulario de contacto que consiste de 3 campos: Nombre, Email y 
-Comaentarios. Se realizan validaciones básicas en el formato del Email y como campos requeridos el Nomnbre 
-y los comentarios. 
+Comentarios. Se realizan validaciones básicas en el formato del Email (usuario@dominio.extension) y como campos requeridos el Nombre y los comentarios. 
 
 Se utilizaron estados para la maniplación de los campos, y se simula el envío de la información mostrando
 los datos por pantalla.
