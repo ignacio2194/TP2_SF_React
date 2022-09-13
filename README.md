@@ -19,10 +19,10 @@ Para mostrar la informacion en la pantalla del navegador se uso 2 API REST disti
 
 Para este proyecto se decidio usa el gestor de paquetes npm.
 
-Podran ver el primer proyecto aca [Repositorio del Primer Proyecto]().
+Podran ver el primer proyecto aca [Repositorio del Primer Proyecto](https://github.com/guillescharf/TP1_SF_React.git).
 
 ## Como instalar el proyecto en tu ordenador
-El proyecto se encuentra en GitHub en este [Repositorio]()
+El proyecto se encuentra en GitHub en este [Repositorio](https://github.com/ignacio2194/TP2_SF_React.git)
 Antes de clonar el proyecto desde GitHub en nuestro ordenador lo que se tiene que tener en cuenta es que este automaticamente nos creara una carpeta donde se encontrara el proyecto clonado.
 
 Una vez ubicado donde queremos que este nuestro proyecto clonado usando nuestra consola/terminal de preferencia ejecutaremos el comando:
@@ -61,3 +61,10 @@ Tambien puede ver los errores en la consola.
 ### Users
 ### Card
 ### Contact Us
+
+En esta sección se desarrollo un formulario de contacto que consiste de 3 campos: Nombre, Email y 
+Comaentarios. Se realizan validaciones básicas en el formato del Email y como campos requeridos el Nomnbre 
+y los comentarios. 
+
+Se utilizaron estados para la maniplación de los campos, y se simula el envío de la información mostrando
+los datos por pantalla.
