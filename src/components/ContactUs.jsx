@@ -4,10 +4,10 @@ import { useEffect, useState} from "react";
 
 const ContactUs = () => {
 
-const [formName, setFormName] = useState([]);
-const [formEmail, setFormEmail] = useState([]);
-const [formComments, setFormComments] = useState([]);
-const [validEmail, setValidEmail] = useState([false]);
+const [formName, setFormName] = useState("");
+const [formEmail, setFormEmail] = useState('');
+const [formComments, setFormComments] = useState('');
+const [validEmail, setValidEmail] = useState(false);
 
 useEffect(() => {
 }, [formName, formEmail]); //Array de dependencias del useEffect
@@ -52,11 +52,9 @@ function sendForm(){
     if(!validEmail){
         alert("Please, enter a valid Email address.");
         return false;
-    }else if(document.getElementById('contactFormName').value.trim() === "" || 
-             document.getElementById('contactFormComments').value.trim() === ""){
+    }else if(!formName|| !formComments){
         alert("Please, complete all the fields.");
         return false;
-
     }else{
         alert("Thanks, your message has been sent successfully!");
         // Aca deberia enviar los datos a un script para procesarlos, por ahora "simulamos"
@@ -68,13 +66,11 @@ function sendForm(){
 }
 
 function showFormData(){
-    // const name = document.getElementById('contactFormName').value;
-    // const email = document.getElementById('contactFormEmail').value;
-    // const comments = document.getElementById('contactFormComments').value;   
+ 
     // Este mensaje es ilustrativo para mostrar la info que se deberia enviar por el form
     const msgToShow = `
-    <div class="msgToShow">
-        <h1>Meessage Sent</h1>
+    <div class="text-xl font-bold text-center text-white ">
+        <h1 class="text-3xl font-bold text-center text-white ">Meessage Sent</h1>
         <p>Your message has been sent as following:</p>
         <br /><br />
         <p>
@@ -112,8 +108,14 @@ function showFormData(){
                             id="contactFormEmail" 
                             onChange={(e) => {validateEmail(e.target.value)}} />
                     <label htmlFor="comments" className="text-white text-2xl">Comments</label>
-                    <textarea className="flex rounded resize-none mb-5 mt-2 p-1 w-80" name="comments" id="contactFormComments" cols="30" rows="10"></textarea>    
-                    <button className="bg-characterAlive text-white font-bold inline-block  text-2xl py-1 mt-2 w-80" id="contactFormSend" onClick={(e) => {return(sendForm())}}>Send</button> 
+                    <textarea className="flex rounded resize-none mb-5 mt-2 p-1 w-80" 
+                            name="comments" 
+                            id="contactFormComments" 
+                            cols="30" 
+                            rows="10"
+                            onChange={(e) => setFormComments(e.target.value)}>
+                    </textarea>    
+                    <button className="bg-characterAlive text-white font-bold inline-block  text-2xl py-1 mt-2 w-80" id="contactFormSend">Send</button> 
                 </form>
             </div>
 
