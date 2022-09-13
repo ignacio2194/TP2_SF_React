@@ -62,6 +62,10 @@ Tambien puede ver los errores en la consola.
 Pantalla de inicio, en el que se muestra la información del proyecto, y los integrantes del grupo de trabajo.
 
 ### Users
+En esta pagina lo que se vera es una tabla de usuarios con varios campos, todo esto esta en un componente llamado Users.\
+Se usaron 2 Hooks para este componente (useState y useEffect).\
+La informacion es traida desde una API REST cual enlace se encuentra mas arriba en el apartado de recursos, la informacion se trae con el metodo Fetch con el complemento de Asyn/Await.\
+Por ultimo se renderiza todo y con un metodo map se itera cada infomacion y se arma cada cada fila con sus respectivos datos.
 ### Card
 ### Contact Us
 
