@@ -58,6 +58,9 @@ Tambien puede ver los errores en la consola.
 ## ¿Que contiene y que hace cada pagina?
 
 ### Home
+
+Pantalla de inicio, en el que se muestra la información del proyecto, y los integrantes del grupo de trabajo.
+
 ### Users
 ### Card
 ### Contact Us
