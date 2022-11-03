@@ -9,7 +9,6 @@ El proposito de este proyecto es transformar el checkpoint #1 que esta hecho con
 
 ## Tecnologias usadas
 - [React.js](https://en.reactjs.org/)
-- [NMP](https://www.npmjs.com/)
 - [Tailwind](https://tailwindcss.com/)
 
 ## Recursos
